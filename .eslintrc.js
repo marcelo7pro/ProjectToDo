@@ -11,14 +11,15 @@ module.exports = {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
         },
         ecmaVersion: 2018,
         sourceType: 'module',
-        parser: '@babel/eslint-parser'
+        parser: '@babel/eslint-parser',
+        requireConfigFile: false,
     },
     plugins: ['react', 'react-hooks', 'testing-library', 'prettier'],
     rules: {

@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import NewTodo from "./components/NewTodo";
 import TodoList from "./components/TodoList";
 
-import "./App.css";
-
 const App = () => {
   const [todos, setTodos] = useState([]);
 
@@ -34,7 +32,7 @@ const App = () => {
   return (
     <section id="app" className="container">
       <header>
-        <h1 className="title">Reunião Direção</h1>
+        <h1 className="title">todo</h1>
       </header>
       <section className="main">
         <NewTodo onNewTodo={onNewTodo} />
