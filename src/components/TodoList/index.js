@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import { MdDelete } from "react-icons/md";
 
+import "./styles.css";
+
 const TodoList = ({ todos, onToggle, onRemove }) => (
   <ul className="todo-list">
     {todos.map((todo) => (
@@ -10,7 +12,7 @@ const TodoList = ({ todos, onToggle, onRemove }) => (
         <span
           className={["todo", todo.checked ? "checked" : ""].join(" ")}
           onClick={() => onToggle && onToggle(todo)}
-          onKeyDown={() => onToggle && onToggle(todo)}
+          onKeyPress={() => onToggle && onToggle(todo)}
           role="button"
           tabIndex={0}
         >
